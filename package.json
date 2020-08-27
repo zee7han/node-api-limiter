@@ -1,0 +1,26 @@
+{
+  "name": "api-limiter",
+  "version": "1.0.0",
+  "description": "A Library to add the limits on the routes in express server.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zee7han/api-limiter.git"
+  },
+  "keywords": [
+    "api-limiter",
+    "node-api-limiter"
+  ],
+  "author": "Mohammad Zeeshan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zee7han/api-limiter/issues"
+  },
+  "homepage": "https://github.com/zee7han/api-limiter#readme",
+  "dependencies": {
+    "redis": "^3.0.2"
+  }
+}
