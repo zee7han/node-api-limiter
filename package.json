@@ -2,7 +2,6 @@
   "name": "api-limiter",
   "version": "1.0.0",
   "description": "A Library to add the limits on the routes in express server.",
-  "main": "index.js",
   "scripts": {
     "test": "jest"
   },
@@ -10,9 +9,36 @@
     "type": "git",
     "url": "git+https://github.com/zee7han/api-limiter.git"
   },
+  "main": "lib/index.js",
+  "files": [
+    "lib/"
+  ],
   "keywords": [
     "api-limiter",
-    "node-api-limiter"
+    "node-api-limiter",
+    "limit",
+    "limiter",
+    "apilimiter",
+    "api",
+    "ratelimit",
+    "rate-limit",
+    "rate",
+    "domain-based-limiter",
+    "node-rate-limiter",
+    "bruteforce",
+    "api-throttling",
+    "throttling",
+    "api-window",
+    "windowing",
+    "node-server-limiter",
+    "express-limiter",
+    "domain",
+    "domain-limiter",
+    "security",
+    "policies",
+    "middleware",
+    "auth",
+    "authorization"
   ],
   "author": "Mohammad Zeeshan",
   "license": "ISC",
