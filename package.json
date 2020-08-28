@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "A Library to add the limits on the routes in express server.",
   "scripts": {
-    "test": "jest"
+    "start": "node lib/index.js",
+    "test": "./node_modules/jest/bin/jest.js",
+    "test-coverage": "./node_modules/jest/bin/jest.js --coverage "
   },
   "repository": {
     "type": "git",
@@ -47,6 +49,7 @@
   },
   "homepage": "https://github.com/zee7han/api-limiter#readme",
   "dependencies": {
-    "redis": "^3.0.2"
+    "jest": "26.4.2",
+    "redis": "3.0.2"
   }
 }
