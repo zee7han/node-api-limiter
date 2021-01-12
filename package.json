@@ -1,6 +1,6 @@
 {
   "name": "node-api-limiter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Library to add the limits on the routes in server.",
   "scripts": {
     "start": "node lib/main.js",
