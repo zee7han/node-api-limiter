@@ -49,6 +49,7 @@
   },
   "homepage": "https://github.com/zee7han/api-limiter#readme",
   "dependencies": {
+    "express": "4.17.1",
     "jest": "26.4.2",
     "redis": "3.0.2"
   }
