@@ -16,17 +16,16 @@ app.use(bodyParser.urlencoded({
 app.use(api_limiter({
     secWindow: 1,
     minWindow: 1,
-    maxSecWindow: 5,
-    maxMinWindow: 10,
+    hrWindow: 1,
+    maxReqSecWindow: 5,
+    maxReqMinWindow: 10,
+    maxReqHrWindow: 100,
     skipRoutes: ["/start"],
     skipIps: [],
     skipFailRequests: true,
     skipSuccessRequests: false,
     store: "redis",
-    redisConf: {
-        host: "localhost",
-        port: 6379
-    }
+    redisUrl: "redis://localhost:6379"
 }))
 app.route("/start").get(controllers.start)
 app.route("/stop").get(controllers.stop)
