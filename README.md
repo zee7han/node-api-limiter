@@ -70,7 +70,22 @@ app.use(bodyParser.urlencoded({
     extended: true
 }))
 
-app.use(apiLimiter())
+app.use(apiLimiter({
+      secWindow: 5, // seconds - how long to keep records of requests
+      minWindow: 5, // minutes - how long to keep records of requests
+      hrWindow: 1, // hours - how long to keep records of requests 
+      maxReqSecWinodw: 5, // max number of recent connections during `window` seconds before sending a 429 response
+      maxReqMinWinodw: 50, // max number of recent connections during `window` minutes before sending a 429 response
+      maxReqHrWindow: 500, // max number of recent connections during `window` hours before sending a 429 response
+      message: "Too many requests, please try again later.", // Message to send while limit reached.
+      statusCode: 429, // 429 status = Too Many Requests (RFC 6585)
+      headers: true, //Send custom rate limit header with limit and remaining
+      skipFailRequests: false, // Do not count failed requests (status >= 400)
+      skipSuccessRequests: false, // Do not count successful requests (status < 400)
+      skipIps: [], // a list of IP addresses which you want to skip for the rate limiting.
+      skipRoutes: [], // a list of routes and path addresses which you want to skip for the rate limiting.
+      keyGenerator: (req, res) =>{ return req.ip }         // allows to create custom keys (by default user IP is used)
+    }))
 app.route("/start").get(controllers.start)
 app.route("/stop").get(controllers.stop)
 
